@@ -1,8 +1,8 @@
 # Plantilla de diseño — Encuesta de satisfacción (hito 1)
 
-**Equipo:** ___ · **Integrantes:** ___ · **Fecha:** 20/10/2026
-**Repositorio (fork):** github.com/[usuario]/IDSD422-lab2-diseno-encuesta
-**Enfoque del equipo (aprobado en clase):** ___
+**Equipo:** ___ · **Integrantes:** Jordan Sangucho, Josue Palma, Aidan Carrasco, Joel Champutiz, Emily Dias· **Fecha:** 25/10/2026
+**Repositorio (fork):** https://github.com/josuepalma23/Lab3-Proyecto-EstII
+**Enfoque del equipo (aprobado en clase):** Satisfacción y expectativas
 
 Completa cada sección. Usa commits por sección; la historia del repositorio se revisa.
 
@@ -10,14 +10,16 @@ Completa cada sección. Usa commits por sección; la historia del repositorio se
 
 ## 1. Objetivo de la encuesta
 
-*Escribe una frase medible: qué decisión de gerencia apoyará esta encuesta.*
+Estimar el porcentaje de personas satisfechas en el intervalo de 18 a 29 años en una escala del 1 al 5 con respecto a RetailAndina e identificar los beneficios que el encuestado espera sobre el programa de fidelización, con el objetivo de ser enviados a la gerencia para la posterior toma de decisiones.
 
 ## 2. Población objetivo
 
-*Define quién pertenece a la población y justifica los límites (región, edad, frecuencia de compra...). Sugerencia: defínela de modo alcanzable — p. ej., personas 18+ que compran habitualmente en supermercados de tu ciudad — para que tus contactos (familia, amigos) califiquen.*
-
-- Población:
-- Límites y justificación:
+- **Población:** Personas de 18 a 29 años, residentes de la ciudad de Quito que compran en tiendas de consumo masivo de manera frecuente.
+- **Límites y justificación:** 
+  - Edad 18-29: Es el enfoque seleccionado, además de ser 18 años la edad mínima requerida para dar consentimiento informado y decidir compras por cuenta propia.
+  - Residentes en la ciudad de Quito, para facilitar la recolección de información en la etapa de la encuesta.
+  - Personas que compran de manera frecuente y al menos una vez al mes en tiendas de consumo masivo, garantiza que el encuestado tenga experiencia suficiente para opinar sobre el tema.
+  - Las personas menores de 18 años y mayores de 29 años quedarán fuera de la encuesta, así como personas que no compran en tiendas de consumo masivo.
 
 ## 3. Método de muestreo
 
