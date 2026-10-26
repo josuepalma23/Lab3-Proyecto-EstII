@@ -23,12 +23,20 @@ Estimar el porcentaje de personas satisfechas en el intervalo de 18 a 29 años e
 
 ## 3. Método de muestreo
 
-*Elige aleatorio simple, estratificado o conveniencia y justifica. Meta: 15–30 respuestas reales (3–6 por integrante); opcional: relleno simulado hasta 60–100 filas marcadas con la columna `origen`.*
+- **Método:** Muestreo estratificado por rango de edad (de 18 a 23 años y de 24 a 29 años), con selección aleatoria por cada uno de los estratos.
+- **Tamaño y Justificación:** Se recolectan 20 respuestas en total, es decir, 10 por estrato y el equivalente a un rango de 3 a 6 respuestas por integrante del grupo. Esta pequeña muestra ayudará al grupo a realizar pruebas y detectar problemas, se estratifica con el objetivo de que ambos grupos de edad queden equitativamente representados con datos reales. En el caso de utilizar filas simuladas, estas serán marcadas como tal y en la columna **origen** y quedarán declaradas en el informe.
+- **Selección de los participantes:** 
+  - Cada integrante buscará entre sus contactos a personas que cumplan con el criterio planteado en la sección de la población objetivo y trabajará en su respectiva clasificación de acuerdo al estrato de edad.
+  - De cada uno de los estratos se sorteará al azar a quién encuestar hasta completar la cuota de encuestados por integrante.
+  - Se pedirá a cada encuestado un referido que a su vez cumpla con los requisitos establecidos para ampliar el alcance del experimento más allá del círculo cercano del integrante del grupo.
+  - La encuesta se aplicará en modalidad virtual por medio de herramientas de formularios de Google o Microsoft durante la semana correspondiente al feriado del próximo 2 y 3 de noviembre, se registrará el número de personas referidas que no contestaron.
+  - **Importante:** Al tratarse de contactos de los integrantes del grupo, esto también tiene relación con la conveniencia, por lo tanto, se expande este punto en la sección 5.
 
-- Método:
-- Tamaño y justificación:
-- Cómo se seleccionarán los participantes:
-- **Equivalente en código (Python o R):** la línea que implementa tu método sobre un CSV de clientes (aleatorio simple, estratificado o conveniencia) con el resultado de una corrida con semilla, y una frase sobre por qué tu método (y no la conveniencia) justifica el hito.
+- Implementación en código:
+
+![alt text](implementacion.jpeg)
+
+
 
 ## 4. Cuestionario (5–10 preguntas)
 
