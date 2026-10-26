@@ -1,6 +1,6 @@
 # Plantilla de diseño — Encuesta de satisfacción (hito 1)
 
-**Equipo:** ___ · **Integrantes:** Jordan Sangucho, Josue Palma, Aidan Carrasco, Joel Champutiz, Emily Dias· **Fecha:** 25/10/2026
+**Equipo:** 4 · **Integrantes:** Jordan Sangucho, Josue Palma, Aidan Carrasco, Joel Champutiz, Emily Dias· **Fecha:** 25/10/2026
 **Repositorio (fork):** https://github.com/josuepalma23/Lab3-Proyecto-EstII
 **Enfoque del equipo (aprobado en clase):** Satisfacción y expectativas
 
@@ -72,14 +72,13 @@ Este método resulta idóneo por encima de la conveniencia pura, ya que se reali
 
 ## 6. Confidencialidad (RA3)
 
-- Datos personales que se piden y por qué:
-- Plan de anonimización (qué se quita o codifica antes de compartir):
+- **Datos personales que se piden:** Solo se va a solicitar la edad, necesaria para verificar el criterio de los estratos y el gasto mensual aproximado, necesario para analizar la relación entre gasto y satisfacción, no se piden más datos personales de ningún tipo.
+- **Plan de anonimización:** Cada respuesta recibe un código en lugar de cualquier identificador, la lista de contactos utilizada se guarda fuera del repositorio por los integrantes del equipo. Finalmente, el CSV crudo no se subirá al fork, solo se publicará la versión anonimizada con la columna **origen** que declara de dónde vienen los datos.
 
 ## 7. Verificación con herramientas (Python/R)
 
-*Escribe `scripts/verificacion_encuesta.py` (o `.R`): debe cargar `plantillas/encuesta_respuestas.csv` y reportar los tipos de cada columna, los datos faltantes por columna y la distribución de `satisfaccion_general` y `recomendaria`. Incluye la salida y responde:*
+El presente script tendrá acceso a los futuros datos y reportará tipos, datos faltantes y las veces que aparece una respuesta por las columnas analizadas
 
-- ¿Coinciden los tipos con tu predicción de la sección 4?
-- ¿Cuántos datos faltantes hay por columna?
+![alt text](salida.jpeg)
 
-*Ejecuta el script sobre el CSV final (separa con un filtro de la columna `origen` las filas reales de las simuladas): ¿qué resultado delataría un sesgo de **no respuesta** y cuál un sesgo de **respuesta**? Escribe tu interpretación usando solo las respuestas reales.*
+**Punto a realizar con los datos reales**
