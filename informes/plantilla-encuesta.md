@@ -36,28 +36,39 @@ Estimar el porcentaje de personas satisfechas en el intervalo de 18 a 29 años e
 
 ![alt text](implementacion.jpeg)
 
+**Salida de la implementación en Python**
+
+![alt text](salida.jpeg)
+
+Este método resulta idóneo por encima de la conveniencia pura, ya que se realiza un sorteo dentro de cada estrato que reduce la influencia de qué encuestado está mas cerca de quien lo encuestó, además, por estrato se aportan la misma cantidad de respuestas, si se realizara por conveniencia las respuestas se pueden quedar acumuladas en un solo grupo.
 
 
 ## 4. Cuestionario (5–10 preguntas)
 
-*Preguntas neutras, específicas, una idea por pregunta, opciones exhaustivas y excluyentes.*
-
 | # | Pregunta | Tipo de variable | Dtype al cargar | Opciones / escala |
 |---|---|---|---|---|
-| 1 | | | | |
-| 2 | | | | |
-| ... | | | | |
+| 1 | ¿Cuál es su edad en años cumplidos?|Numérica Discreta |int64 |Número entero entre 18 y 29. |
+| 2 | ¿Con qué frecuencia compra en RetailAndina?|Categórica Ordinal |object |Semanal, Quincenal, Mensual, Menos de una vez al mes. |
+| 3 | En general, ¿Qué tan satisfecho se siente con RetailAndina? |Categórica Ordinal |int64 |1 = Muy insatisfecho, 2 = Insatisfecho, 3 = Neutral, 4 = Satisfecho, 5 = Muy satisfecho |
+| 4 | ¿Qué tan satisfecho está con los precios que ofrece RetailAndina|Categórica ordinal |int64 |1 = Muy insatisfecho, 2 = Insatisfecho, 3 = Neutral, 4 = Satisfecho, 5 = Muy satisfecho |
+| 5 |¿Qué tan satisfecho está con la atención que recibe por parte del personal de RetailAndina? |Categórica ordinal |int64 |1 = Muy insatisfecho, 2 = Insatisfecho, 3 = Neutral, 4 = Satisfecho, 5 = Muy satisfecho |
+| 6 |¿Recomendaría RetailAndina a un conocido? |Categórica nominal |object |Si, No |
+| 7 |Si RetailAndina lanzara un programa de fidelización, ¿qué tan probable es que se inscriba? |Categórica ordinal |int64 |1 = Nada probable, 2 = Poco probable, 3 = Probable, 4 = Altamente probable, 5 = Seguramente sí |
+| 8 |	¿Cuál de estos beneficios del programa valoraría más? |Categórica nominal |object |Descuentos, Puntos canjeables, Ofertas personalizadas, Entregas a domicilio |
+| 9 | ¿Cuánto gasta al mes en compras de consumo masivo, en dólares?|Numérica contínua |float64 |Valor numérico en dólares mayor a 0 |
 
-*Nota: la columna "tipo de variable" usa la clasificación del cap. 3 (numérica continua/discreta, categórica binaria/ordinal). "Dtype al cargar" es cómo crees que llegará la columna en `df.dtypes`/`str()` (`int64`, `float64`, `str`/`object` según la versión de pandas). Pista: el dtype es una pista, no la clasificación — una ordinal puede llegar como `int`.*
+**Columnas adicionales del CSV:** código, fecha, origen.
+
+**Nota:** A pesar de que las preguntas 3, 4, 5, 7 lleguen como int64, se clasifican como ordinales, el tipo de dato solo es una pista, no la clasificación en sí.
 
 ## 5. Análisis de sesgos
 
-*Identifica 2 problemas potenciales de esta encuesta y su mitigación.*
 
 | Sesgo potencial | Mitigación |
 |---|---|
-| 1. | |
-| 2. | |
+| **1. Sesgo de selección:** Al encuestar a personas cercanas al círculo social de los integrantes del grupo, la muestra se parece al equipo en edad, ciudad, nivel socioeconómico y puede no representar a todos los clientes. |Estratificar por rango de edad y sortear por dentro de cada estrato, pedir referidos fuera del círculo cercano del integrante del grupo. |
+| **2. Sesgo de no respuesta:** Aquellos con opiniones extremas pueden responder en mayor magnitud que el resto, los clientes poco satisfechos pueden ignorar la encuesta.|Formulario corto, registro de personas contactadas frente al número de personas contactadas para calcular la tasa de no respuesta. |
+| **3. Sesgo de respuesta:** Al ser conocidos del equipo, los encuestados pueden dar calificaciones altas o respuestas favorables para agradar o por temor a ser juzgados |Encuesta anónima, que aclare que no hay respuestas correctas o incorrectas, preguntas con redacción neutra y que eviten un sesgo al ser planteadas. |
 
 ## 6. Confidencialidad (RA3)
 
