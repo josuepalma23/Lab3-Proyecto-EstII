@@ -1,6 +1,6 @@
 # Plantilla de diseño — Encuesta de satisfacción (hito 1)
 
-**Equipo:** 4 · **Integrantes:** Jordan Sangucho, Josue Palma, Aidan Carrasco, Joel Champutiz, Emily Dias· **Fecha:** 25/10/2026
+**Equipo:** 4 · **Integrantes:** Jordan Sangucho, Josue Palma, Aidan Carrasco, Joel Champutiz, Emily Dias· **Fecha:** 30/10/2026
 **Repositorio (fork):** https://github.com/josuepalma23/Lab3-Proyecto-EstII
 **Enfoque del equipo (aprobado en clase):** Satisfacción y expectativas
 
@@ -23,14 +23,14 @@ Estimar el porcentaje de personas satisfechas en el intervalo de 18 a 29 años e
 
 ## 3. Método de muestreo
 
-- **Método:** Muestreo estratificado por rango de edad (de 18 a 23 años y de 24 a 29 años), con selección aleatoria por cada uno de los estratos.
-- **Tamaño y Justificación:** Se recolectan 20 respuestas en total, es decir, 10 por estrato y el equivalente a un rango de 3 a 6 respuestas por integrante del grupo. Esta pequeña muestra ayudará al grupo a realizar pruebas y detectar problemas, se estratifica con el objetivo de que ambos grupos de edad queden equitativamente representados con datos reales. En el caso de utilizar filas simuladas, estas serán marcadas como tal y en la columna **origen** y quedarán declaradas en el informe.
+- **Método:** Muestreo no probabilístico por cuotas según rango de edad (de 18 a 23 años y de 24 a 29 años), con una cuota por el rango de 18 a 23 años y otra para el rango de 24 a 29 años.
+- **Tamaño y Justificación:** Se recolectan 20 respuestas en total, es decir, una cuota de 10 encuestas por cada rango de edad, lo que equivale a un rango de 3 a 6 respuestas por integrante del grupo. Esta pequeña muestra ayudará al grupo a realizar pruebas y detectar problemas, se definieron estas cuotas con el objetivo de que ambos grupos de edad queden equitativamente representados con datos reales. En el caso de utilizar filas simuladas, estas serán marcadas como tal y en la columna **origen** y quedarán declaradas en el informe.
 - **Selección de los participantes:** 
   - Cada integrante buscará entre sus contactos a personas que cumplan con el criterio planteado en la sección de la población objetivo y trabajará en su respectiva clasificación de acuerdo al estrato de edad.
-  - De cada uno de los estratos se sorteará al azar a quién encuestar hasta completar la cuota de encuestados por integrante.
+  - De la lista de contactos de cada integrante, se seleccionará a quien encuestar hasta alcanzar la cuota.
   - Se pedirá a cada encuestado un referido que a su vez cumpla con los requisitos establecidos para ampliar el alcance del experimento más allá del círculo cercano del integrante del grupo.
   - La encuesta se aplicará en modalidad virtual por medio de herramientas de formularios de Google o Microsoft durante la semana correspondiente al feriado del próximo 2 y 3 de noviembre, se registrará el número de personas referidas que no contestaron.
-  - **Importante:** Al tratarse de contactos de los integrantes del grupo, esto también tiene relación con la conveniencia, por lo tanto, se expande este punto en la sección 5.
+  - **Importante:** Al tratarse de contactos de los integrantes del grupo, este diseño corresponde a un muestreo por conveniencia, por lo tanto, las implicaciones y limitaciones de este método se expanden en la sección 5.
 
 - Implementación en código:
 
@@ -47,15 +47,15 @@ Este método resulta idóneo por encima de la conveniencia pura, ya que se reali
 
 | # | Pregunta | Tipo de variable | Dtype al cargar | Opciones / escala |
 |---|---|---|---|---|
-| 1 | ¿Cuál es su edad en años cumplidos?|Numérica Discreta |int64 |Número entero entre 18 y 29. |
-| 2 | ¿Con qué frecuencia compra en RetailAndina?|Categórica Ordinal |object |Semanal, Quincenal, Mensual, Menos de una vez al mes. |
+| 1 | ¿Cuál es su edad en años cumplidos?|Numérica Discreta |int64 |18 a 23 años, 24 a 29 años, 30 años o más |
+| 2 | ¿Con qué frecuencia compra en RetailAndina?|Categórica Ordinal |object |Semanal, Quincenal, Mensual, Menos de una vez al mes, Nunca/No compro en RetailAndina |
 | 3 | En general, ¿Qué tan satisfecho se siente con RetailAndina? |Categórica Ordinal |int64 |1 = Muy insatisfecho, 2 = Insatisfecho, 3 = Neutral, 4 = Satisfecho, 5 = Muy satisfecho |
 | 4 | ¿Qué tan satisfecho está con los precios que ofrece RetailAndina|Categórica ordinal |int64 |1 = Muy insatisfecho, 2 = Insatisfecho, 3 = Neutral, 4 = Satisfecho, 5 = Muy satisfecho |
 | 5 |¿Qué tan satisfecho está con la atención que recibe por parte del personal de RetailAndina? |Categórica ordinal |int64 |1 = Muy insatisfecho, 2 = Insatisfecho, 3 = Neutral, 4 = Satisfecho, 5 = Muy satisfecho |
-| 6 |¿Recomendaría RetailAndina a un conocido? |Categórica nominal |object |Si, No |
-| 7 |Si RetailAndina lanzara un programa de fidelización, ¿qué tan probable es que se inscriba? |Categórica ordinal |int64 |1 = Nada probable, 2 = Poco probable, 3 = Probable, 4 = Altamente probable, 5 = Seguramente sí |
-| 8 |	¿Cuál de estos beneficios del programa valoraría más? |Categórica nominal |object |Descuentos, Puntos canjeables, Ofertas personalizadas, Entregas a domicilio |
-| 9 | ¿Cuánto gasta al mes en compras de consumo masivo, en dólares?|Numérica contínua |float64 |Valor numérico en dólares mayor a 0 |
+| 6 |¿Recomendaría RetailAndina a un conocido? |Categórica binaria |object |Sí, No |
+| 7 |Si RetailAndina lanzara un programa de fidelización, ¿qué tan probable es que se inscriba? |Categórica ordinal |int64 |1 Nada probable, 2 Poco probable, 3 Probable, 4 Altamente probable, 5 Muy probable |
+| 8 |	¿Qué otro beneficio esperaría de un programa de fidelización de RetailAndina? |Categórica nominal |object |Abierta, opcional. |
+| 9 | ¿Cuánto gasta al mes en compras de consumo masivo, en dólares?|Numérica contínua |float64 |$1 - $10, $10 - $50, $50 - $100 |
 
 **Columnas adicionales del CSV:** código, fecha, origen.
 
@@ -66,9 +66,9 @@ Este método resulta idóneo por encima de la conveniencia pura, ya que se reali
 
 | Sesgo potencial | Mitigación |
 |---|---|
-| **1. Sesgo de selección:** Al encuestar a personas cercanas al círculo social de los integrantes del grupo, la muestra se parece al equipo en edad, ciudad, nivel socioeconómico y puede no representar a todos los clientes. |Estratificar por rango de edad y sortear por dentro de cada estrato, pedir referidos fuera del círculo cercano del integrante del grupo. |
-| **2. Sesgo de no respuesta:** Aquellos con opiniones extremas pueden responder en mayor magnitud que el resto, los clientes poco satisfechos pueden ignorar la encuesta.|Formulario corto, registro de personas contactadas frente al número de personas contactadas para calcular la tasa de no respuesta. |
-| **3. Sesgo de respuesta:** Al ser conocidos del equipo, los encuestados pueden dar calificaciones altas o respuestas favorables para agradar o por temor a ser juzgados |Encuesta anónima, que aclare que no hay respuestas correctas o incorrectas, preguntas con redacción neutra y que eviten un sesgo al ser planteadas. |
+| **1. Sesgo de selección:** Al encuestar a personas cercanas al círculo social de los integrantes del grupo, la muestra se parece al equipo en edad, ciudad, nivel socioeconómico y puede no representar a todos los clientes de RetailAndina |Establecer cuotas por rango de edad y pedir referidos a los contactados para ampliar la muestra fuera del círculo cercano del grupo. |
+| **2. Sesgo de no respuesta:** Aquellos con opiniones extremas pueden responder en mayor magnitud que el resto, los clientes poco satisfechos pueden ignorar la encuesta.|Formulario corto, y registro de las personas contactadas frente al número de personas que efectivamente respondieron, para calcular la tasa de no respuesta. |
+| **3. Sesgo de respuesta:** Al ser conocidos del equipo, los encuestados pueden dar calificaciones altas o respuestas favorables para agradar o por temor a ser juzgados.|Encuesta anónima, que aclare que no hay respuestas correctas o incorrectas, preguntas con redacción neutra y que eviten un sesgo al ser planteadas. |
 
 ## 6. Confidencialidad (RA3)
 
