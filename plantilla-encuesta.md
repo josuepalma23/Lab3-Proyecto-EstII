@@ -49,9 +49,9 @@ Este método resulta idóneo por encima de la conveniencia pura, ya que se reali
 |---|---|---|---|---|
 | 1 | ¿Cuál es su edad en años cumplidos?|Numérica Discreta |int64 |18 a 23 años, 24 a 29 años, 30 años o más |
 | 2 | ¿Con qué frecuencia compra en RetailAndina?|Categórica Ordinal |object |Semanal, Quincenal, Mensual, Menos de una vez al mes, Nunca/No compro en RetailAndina |
-| 3 | En general, ¿Qué tan satisfecho se siente con RetailAndina? |Categórica Ordinal |int64 |1 = Muy insatisfecho, 2 = Insatisfecho, 3 = Neutral, 4 = Satisfecho, 5 = Muy satisfecho |
-| 4 | ¿Qué tan satisfecho está con los precios que ofrece RetailAndina|Categórica ordinal |int64 |1 = Muy insatisfecho, 2 = Insatisfecho, 3 = Neutral, 4 = Satisfecho, 5 = Muy satisfecho |
-| 5 |¿Qué tan satisfecho está con la atención que recibe por parte del personal de RetailAndina? |Categórica ordinal |int64 |1 = Muy insatisfecho, 2 = Insatisfecho, 3 = Neutral, 4 = Satisfecho, 5 = Muy satisfecho |
+| 3 | En general, ¿Qué tan satisfecho se siente con RetailAndina? |Categórica Ordinal |int64 |1: Muy insatisfecho, 2: Insatisfecho, 3: Neutral, 4: Satisfecho, 5: Muy satisfecho |
+| 4 | ¿Qué tan satisfecho está con los precios que ofrece RetailAndina? |Categórica ordinal |int64 |1: Muy insatisfecho, 2: Insatisfecho, 3: Neutral, 4: Satisfecho, 5: Muy satisfecho |
+| 5 |¿Qué tan satisfecho está con la atención que recibe por parte del personal de RetailAndina? |Categórica ordinal |int64 |1: Muy insatisfecho, 2: Insatisfecho, 3: Neutral, 4: Satisfecho, 5: Muy satisfecho |
 | 6 |¿Recomendaría RetailAndina a un conocido? |Categórica binaria |object |Sí, No |
 | 7 |Si RetailAndina lanzara un programa de fidelización, ¿qué tan probable es que se inscriba? |Categórica ordinal |int64 |1 Nada probable, 2 Poco probable, 3 Probable, 4 Altamente probable, 5 Muy probable |
 | 8 |	¿Qué otro beneficio esperaría de un programa de fidelización de RetailAndina? |Categórica nominal |object |Abierta, opcional. |
